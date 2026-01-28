@@ -1,0 +1,14 @@
+services:
+  redis-single:
+    image: redis:8.4.0-bookworm
+    container_name: redis-single
+    ports:
+      - "17000:6379"
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--protected-mode", "no"]
+    restart: unless-stopped
+    networks:
+      - redis-network
+
+networks:
+  redis-network:
+    name: redis-network
