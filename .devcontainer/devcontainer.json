@@ -7,7 +7,7 @@
   ],
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      installYarnUsingApt: false
+      "installYarnUsingApt": false
     },
     // curlなどのツールを導入しておく
     "ghcr.io/devcontainers/features/common-utils:2": {},
