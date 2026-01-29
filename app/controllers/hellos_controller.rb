@@ -1,6 +1,5 @@
 class HellosController < ApplicationController
   skip_before_action :verify_authenticity_token, raise: false
-  layout false
 
   def index
     puts session[:message]
