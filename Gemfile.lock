@@ -195,16 +195,15 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
-    redis (4.8.1)
-    redis-actionpack (5.5.0)
-      actionpack (>= 5)
-      redis-rack (>= 2.1.0, < 4)
-      redis-store (>= 1.1.0, < 2)
-    redis-rack (3.0.0)
-      rack-session (>= 0.2.0)
-      redis-store (>= 1.2, < 2)
-    redis-store (1.11.0)
-      redis (>= 4, < 6)
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.26.4)
+      connection_pool
+    redis-cluster-client (0.13.7)
+      redis-client (~> 0.24)
+    redis-clustering (5.4.1)
+      redis (= 5.4.1)
+      redis-cluster-client (>= 0.10.0)
     reline (0.6.3)
       io-console (~> 0.5)
     securerandom (0.4.1)
@@ -247,8 +246,8 @@ DEPENDENCIES
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.2)
-  redis (= 4.8.1)
-  redis-actionpack (~> 5.5)
+  redis
+  redis-clustering
   sqlite3 (>= 2.1)
   tzinfo-data
 

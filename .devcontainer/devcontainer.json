@@ -6,9 +6,7 @@
     "source=${localEnv:HOME}/.agent/codex/.codex,target=/home/vscode/.codex,type=bind,consistency=cached",
   ],
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      installYarnUsingApt: false
-    },
+    "ghcr.io/devcontainers/features/node:1": {},
     // curlなどのツールを導入しておく
     "ghcr.io/devcontainers/features/common-utils:2": {},
     // サードパーティのRedis CLIを入れる
